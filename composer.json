@@ -1,0 +1,18 @@
+{
+    "name": "ovicko/cycle_orm_example",
+    "require": {
+        "cycle/orm": "^1.5",
+        "cycle/annotated": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ovicko\\CycleOrmExample\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AMWOLLO VICTOR",
+            "email": "amwollo@yahoo.com"
+        }
+    ]
+}
