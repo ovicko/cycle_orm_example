@@ -7,17 +7,11 @@ $dbal = new Database\DatabaseManager(
     new Database\Config\DatabaseConfig([
         'default'     => 'default',
         'databases'   => [
-            'default' => ['connection' => 'sqlite']
+            'default' => ['connection' => 'mysql']
         ],
         'connections' => [
-            // 'sqlite' => [
-            //     'driver'  => Database\Driver\SQLite\SQLiteDriver::class,
-            //     'connection' => 'sqlite:database.db',
-            //     'username'   => '',
-            //     'password'   => '',
-            // ]
             'mysql'     => [
-                'driver'  => Driver\MySQL\MySQLDriver::class,
+                'driver'  => Database\Driver\MySQL\MySQLDriver::class,
                 'options' => [
                     'connection' => 'mysql:host=localhost;dbname=opencart_api',
                     'username'   => 'root',
@@ -27,3 +21,5 @@ $dbal = new Database\DatabaseManager(
         ]
     ])
 );
+
+print_r($dbal->database('default')->getTables());
