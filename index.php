@@ -31,7 +31,7 @@ $customers = $dbal->database('default')->table('customer')->select()->fetchAll()
 
 foreach ($customers as $customer) {
     // print_r($customer);
-    print_r($customer['customer_id'] . " " . $customer['firstname']);
+    print_r($customer['customer_id'] . " " . $customer['firstname'] . " " . $customer['lastname']);
     print_r("\n");
 }
 
